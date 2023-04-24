@@ -1,0 +1,56 @@
+<%= stylesheet_link_tag 'top', :media => "all" %>
+<%= stylesheet_link_tag 'header', :media => "all" %>
+<%= stylesheet_link_tag 'footer', :media => "all" %>
+
+<%= render "shared/header" %>
+
+<div class="contents">
+  <div class="top-catch">
+    <h1 class="catch-title">情報の共有を<br>
+      シンプルに</h1>
+    <p class="catch-description">
+      情報共有は、組織で働くうえでとても大切です<br>
+      情報共有の「わ」は、簡単に誰でも<br>
+      チームでの情報を共有できるサービスです
+    </p>
+  </div>
+  <div class="top-catch-image">
+    <%= image_tag "top-intro001.png", class: "top-image" %>
+  </div>
+</div>
+<div class="upper-content">
+  <div class="content-title">
+    <h2 class="service-title">情報共有の「わ」とは<br></h2>
+  </div>
+  <p class="service-description">
+    「もっと手軽にテームの情報を共有したい」<br>
+    情報共有の「わ」は、そのような想いに応えるべく生まれたサービスです
+  </p>
+</div>
+<div class="bottom-content">
+  <ul class="be-made-lists">
+    <li class="be-made-list">
+      <%= image_tag "top-intro003.png", class: "list-image" %>
+      <h4 class="list-name">チームを作成する</h4>
+      <p class="be-made-description">
+        情報を共有したい人とチームを作成できます。
+      </p>
+    </li>
+    <li>
+      <%= image_tag "top-intro004.png", class: "list-image" %>
+      <h4 class="list-name">情報を投稿する</h4>
+      <p class="be-made-description">
+        チームで共有したい情報を投稿できます。
+      </p>
+    </li>
+    <li>
+      <%= image_tag "top-intro005.png", class: "list-image" %>
+      <h4 class="list-name">メッセージを送る</h4>
+      <p class="be-made-description">
+        投稿された情報に対してメッセージを送れます。
+      </p>
+    </li>
+  </ul>
+</div>
+
+<%= render "shared/footer" %>

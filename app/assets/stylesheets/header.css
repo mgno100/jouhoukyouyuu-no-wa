@@ -1,0 +1,33 @@
+/* ヘッダー */
+.header {
+  background-color: #eaf6fd;
+  padding: 20px 0;
+}
+
+.heading {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 28px;
+  color: #3265b8;
+}
+
+.login,
+.sign-up {
+  display: inline-block;
+  padding: 0.5em 1.0em;
+  font-size: 0.9em;
+  color: #4699ca;
+  text-decoration: none;
+  user-select: none;
+  border: 1.5px #4699ca solid;
+  border-radius: 5px;
+}

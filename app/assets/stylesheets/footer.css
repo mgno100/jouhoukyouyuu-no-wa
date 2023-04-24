@@ -1,0 +1,11 @@
+/* フッター */
+.footer {
+  background-color: #eaf6fd;
+  padding: 10px 0;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 10px;
+  color: #87CEFA;
+}

@@ -1,0 +1,93 @@
+/* メイン */
+.contents {
+  height: 450px;
+  width: 1000px;
+  margin: auto;
+  display: flex;
+  overflow: hidden;
+}
+
+.top-catch {
+  width: 40%;
+}
+
+.catch-title {
+  font-size: 50px;
+  color: #113b7d;
+  margin: 40px auto 20px;
+}
+
+.top-catch-image {
+  width: 60%;
+}
+
+.top-catch-image img {
+  width: 93%;
+  height: auto;
+  object-fit: contain;
+}
+
+.catch-description {
+  margin-top: 20px;
+  color: #718fbf;
+  line-height: 1.5;
+}
+
+
+/* アプリの説明*/
+.upper-content {
+  height: 300px;
+  width: 600px;
+  margin: 50px auto 0;
+  padding: 10px;
+}
+
+.content-title{
+  text-align: center;
+  margin: 30px auto;
+}
+
+.service-title {
+  font-size: 30px;
+  color: #113b7d;
+}
+
+.service-description {
+  text-align: center;
+  color: #718fbf;
+  line-height: 2.0;
+  width: 100%;
+}
+
+
+/* アプリでできること*/
+.bottom-content {
+  height: 450px;
+  width: 1100px;
+  margin: 50px auto;
+}
+
+.be-made-lists {
+  display: flex;
+  justify-content: space-around;
+  margin: 60px 0;
+  overflow-x: auto;
+}
+
+.list-image {
+  height: 300px;
+  max-width: 100%;
+}
+
+.list-name {
+  font-size: 20px;
+  text-align: center;
+  color: #113b7d;
+}
+
+.be-made-description {
+  font-size: 15px;
+  text-align: center;
+  color: #718fbf;
+  line-height: 3.0;
+}
