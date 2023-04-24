@@ -95,3 +95,26 @@
   font-size: 14px;
   cursor: pointer
 }
+
+/* ログインページ */
+.login-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px
+}
+
+.login-blue-btn {
+  width: 100%;
+  margin-bottom: 50px;
+  background: #113b7d;
+  border: 1px solid #113b7d;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer
+}
+
+.login-flash-message {
+  text-align: center;
+  color: red
+}
