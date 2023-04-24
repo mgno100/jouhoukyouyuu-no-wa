@@ -118,3 +118,34 @@
   text-align: center;
   color: red
 }
+
+/* グループ一覧画面 */
+.group-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.group-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.group-title {
+  font-size: 35px;
+  color: #2e408c
+}
+
+.group-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.group-name {
+  font-size: 2.5vh;
+}
