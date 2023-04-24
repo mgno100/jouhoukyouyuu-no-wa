@@ -1,24 +1,54 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## users テーブル
 
-Things you may want to cover:
+| Column             | Type   | Options                   |
+| ------------------ | ------ | ------------------------- |
+| nickname           | string | null: false               |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
+| occupation         | text   | null: false               |
+| position           | text   | null: false               |
 
-* Ruby version
+### Association
 
-* System dependencies
+- has_many :groups
+- has_many :posts
 
-* Configuration
+## groups テーブル
 
-* Database creation
+| Column       | Type    | Options     |
+| ------------ | ------- | ----------- |
+| name         | string  | null: false |
+| introduction | text    |             |
 
-* Database initialization
+### Association
 
-* How to run the test suite
+- has_many :users
+- has_many :posts
 
-* Services (job queues, cache servers, search engines, etc.)
+## postsテーブル
 
-* Deployment instructions
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| title    | string     | null: false                    |
+| sentence | text       | null: false                    |
+| group    | references | null: false, foreign_key: true |
+| user     | references | null: false, foreign_key: true |
 
-* ...
+### Association
+
+- belongs_to :user
+- belongs_to :group
+- has_many :comments
+
+## commentsテーブル
+
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| content | text       | null: false                    |
+| post    | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :post
