@@ -1,0 +1,13 @@
+<header class="header">
+  <div class="heading">
+    <div class="nav">
+      <div class="nav__left">
+        <%= link_to 'ログアウト', destroy_user_session_path, class: "logout" %>
+        <%= link_to 'マイページ', "#", class: "my-page" %>
+      </div>
+      <div class="nav__right">
+        <%= link_to 'グループ作成', "/", class: "title" %>
+      </div>
+    </div>
+  </div>
+</header>
