@@ -22,6 +22,7 @@
         </div>
         <%= f.text_area :introduction, class:"groups-text", id:"introduction", placeholder:"グループの紹介文（任意 100文字まで）", rows: "3", maxlength:"100" %>
       </div>
+      <input name="group[user_ids][]" type="hidden" value=<%= current_user.id %>>
     </div>
     <div class="create-btn-contents">
       <%= f.submit "作成する" ,class:"create-btn" %>
