@@ -5,3 +5,5 @@ ja:
         nickname: お名前
         occupation: 所属
         position: 役職
+      group:
+        name: グループ名

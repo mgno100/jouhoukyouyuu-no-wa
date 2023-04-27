@@ -1,0 +1,39 @@
+<%= stylesheet_link_tag 'style', :media => "all" %>
+<%= stylesheet_link_tag 'error-messages.css', :media => "all" %>
+
+<div class="group-create-contents">
+  <header class="group-create-header">
+  </header>
+  <div class="group-create-main">
+    <h2 class="group-create-title">グループの情報を入力</h2>
+    <%= form_with model: @group, local: true do |f| %>
+    <%= render 'shared/error-messages', model: f.object %>
+
+    <div class="new-groups">
+      <div class="new-groups-text">
+        グループ名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :name, class:"groups-text", id:"name", placeholder:"グループ名（必須 40文字まで)", maxlength:"40" %>
+      <div class="groups-explain">
+        <div class="new-groups-text">
+          グループの紹介文
+          <span class="form-any">任意</span>
+        </div>
+        <%= f.text_area :introduction, class:"groups-text", id:"introduction", placeholder:"グループの紹介文（任意 100文字まで）", rows: "3", maxlength:"100" %>
+      </div>
+      <input name="group[user_ids][]" type="hidden" value=<%= current_user.id %>>
+    </div>
+    <div class="create-btn-contents">
+      <%= f.submit "作成する" ,class:"create-btn" %>
+      <%=link_to 'もどる', groups_path, class:"back-btn" %>
+    </div>
+  </div>
+  <% end %>
+
+  <footer class="group-create-footer">
+    <p class="copyright">
+      ©︎2023 情報共有の「わ」
+    </p>
+  </footer>
+</div>
