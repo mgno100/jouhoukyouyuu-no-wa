@@ -4,13 +4,50 @@
 
 <%= render "shared/second-header" %>
 
-<div class="group-main">
-  <div class='contents'>
-    <div class="upper-content">
-      <p>グループがありません</p>
-    </div>
-    <div class="bottom-content">
-    </div>
+<%# 一覧表示画面 %>
+<div class='group-index-main'>
+  <div class='group-index-contents'>
+    <% @groups.each do |group| %>
+      <%# グループ１つ分の表示 %>
+      <div class='group-content'>
+        <%# 参加人数に関する表示 %>
+        <div class='group'>
+          <div class='group-member__num'>
+            <%= group.users.count%><span>人</span>
+          </div>
+          <div class='group__unit'>
+            参加中
+          </div>
+        </div>
+
+        <%# グループ情報の表示 %>
+        <div class='group-detail'>
+          <div class='group-top'>
+            <div class='group-top__title'>
+              <%= group.name %>
+            </div>
+          </div>
+          <div class='group-bottom'>
+            <div class='group-bottom__content'>
+              <%= group.introduction %>
+            </div>
+          </div>
+        </div>
+        <%if group.users.exists?(current_user.id)%>
+          <div class="group-joing-btn">
+            <div class="group-joing-text">
+              参加中
+            </div>
+          </div>
+        <% else %>
+          <div class="group-join-btn">
+            <div class="group-join-text">
+              <%= link_to '参加', groups_path, class: "join" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>
 

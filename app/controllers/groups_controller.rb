@@ -1,6 +1,8 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!, only: [:new]
+
   def index
+    @groups = Group.all.order(created_at: :desc)
   end
 
   def new
