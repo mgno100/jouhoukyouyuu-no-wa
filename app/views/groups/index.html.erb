@@ -33,19 +33,19 @@
             </div>
           </div>
         </div>
-        <%#if group.users.exists?(current_user.id)%>
+        <%if group.users.exists?(current_user.id)%>
           <div class="group-joing-btn">
             <div class="group-joing-text">
               参加中
             </div>
           </div>
-        <%# else %>
-          <%#div class="group-join-btn">
+        <% else %>
+          <div class="group-join-btn">
             <div class="group-join-text">
               <%= link_to '参加', groups_path, class: "join" %>
-            <%#/div>
+            </div>
           </div>
-        <%# end %>
+        <% end %>
       </div>
     <% end %>
   </div>
