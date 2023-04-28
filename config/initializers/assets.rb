@@ -22,4 +22,5 @@ Rails.application.config.assets.precompile += %w(
   footer.css
   second-header.css
   error-messages.css
+  posts.css
 )

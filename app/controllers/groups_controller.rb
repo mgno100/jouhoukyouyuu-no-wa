@@ -5,6 +5,14 @@ class GroupsController < ApplicationController
     @groups = Group.all.order(created_at: :desc)
   end
 
+  def join
+    @group = Group.find(params[:id])
+    unless @group.users.exists?(current_user.id)
+      @group.users << current_user
+      redirect_to group_posts_path(:group_id)
+    end
+  end
+
   def new
     @group = Group.new
   end

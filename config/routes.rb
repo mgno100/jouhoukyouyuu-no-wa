@@ -4,5 +4,10 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
   root to: "top#index"
-  resources :groups, only: [:index, :new, :create]
+  resources :groups, only: [:index, :new, :create] do
+    member do
+      get 'join'
+    end
+    resources :posts, only: [:index]
+  end
 end
