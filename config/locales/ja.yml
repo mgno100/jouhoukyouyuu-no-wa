@@ -10,6 +10,8 @@ ja:
       post:
         title: タイトル名
         sentence: 情報の内容文
+        group: グループ
+        user: ユーザー
   time:
     formats:
       default: "%Y/%m/%d %H:%M:%S"
