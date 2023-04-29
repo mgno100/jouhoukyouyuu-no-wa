@@ -1,49 +1,16 @@
 <div class="post-header">
-<div class="left-header">
+  <div class="left-header">
     <div class="header-title">
-      市民課窓口係
+      <%= @group.name %>
     </div>
   </div>
   <div class="right-header">
     <div class="header-button">
-      <a href="#">投稿する</a>
+      <%= link_to "投稿作成", new_group_post_path(@group.id) %>
     </div>
   </div>
 </div>
 
 <div class="posts">
-<div class="post">
-    <div class="upper-post">
-      <div class="post-title">
-        明日の会議について
-      </div>
-    </div>
-    <div class="lower-post">
-      <div class="post-user">
-        花山太郎
-      </div>
-      <div class="post-date">
-        2020/3/31(Wed) 12:43:30
-      </div>
-    </div>
-  </div>
-
-  <div class="post">
-    <div class="upper-post">
-      <div class="post-title">
-        4月の研修のお知らせ
-      </div>
-    </div>
-    <div class="lower-post">
-      <div class="post-user">
-        山田海子
-      </div>
-      <div class="post-date">
-        2020/3/31(Wed) 12:47:30
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="form">
+  <%= render partial: 'shared/post', collection: @posts %>
 </div>

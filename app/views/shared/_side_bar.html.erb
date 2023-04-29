@@ -1,21 +1,18 @@
 <div class="side-bar-header">
 <div class="header-name">
-    <a href="#">花山太郎</a>
+    <%= link_to current_user.nickname, "#" %>
   </div>
   <div class="back-group">
-    <a href="#">グループ一覧へ戻る</a>
+    <%= link_to "グループ一覧へ戻る", groups_path %>
   </div>
 </div>
 
 <div class="members">
+<% @group.users.each do |user| %>
 <div class="member">
     <div class="member-name">
-      山田海子
+      <%= user.nickname %>
     </div>
   </div>
-  <div class="member">
-    <div class="member-name">
-      木本次郎
-    </div>
-  </div>
+  <% end %>
 </div>

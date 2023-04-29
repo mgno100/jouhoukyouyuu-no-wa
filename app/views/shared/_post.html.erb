@@ -1,0 +1,16 @@
+<div class="post">
+  <div class="upper-post">
+      <!-- 投稿した情報のタイトル名を出力する -->
+      <%= link_to (post.title), "#" %>
+  </div>
+  <div class="lower-post">
+    <div class="post-user">
+      <!-- 投稿したユーザー名情報を出力する -->
+      <%= post.user.nickname %>
+    </div>
+    <div class="post-date">
+      <!-- 投稿した時刻を出力する -->
+      <%= l post.created_at %>
+    </div>
+  </div>
+</div>
