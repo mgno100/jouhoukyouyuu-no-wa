@@ -12,37 +12,7 @@
 </div>
 
 <div class="posts">
-<div class="post">
-    <div class="upper-post">
-      <div class="post-title">
-        明日の会議について
-      </div>
-    </div>
-    <div class="lower-post">
-      <div class="post-user">
-        花山太郎
-      </div>
-      <div class="post-date">
-        2020/3/31(Wed) 12:43:30
-      </div>
-    </div>
-  </div>
-
-  <div class="post">
-    <div class="upper-post">
-      <div class="post-title">
-        4月の研修のお知らせ
-      </div>
-    </div>
-    <div class="lower-post">
-      <div class="post-user">
-        山田海子
-      </div>
-      <div class="post-date">
-        2020/3/31(Wed) 12:47:30
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'shared/post', collection: @posts %>
 </div>
 
 <div class="form">

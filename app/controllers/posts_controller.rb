@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   def index
     @post = Post.new
     @group = Group.find(params[:group_id])
+    @posts = @group.posts.includes(:user)
   end
 
   def new
@@ -15,6 +16,7 @@ class PostsController < ApplicationController
     if @post.save
       redirect_to group_posts_path(@group)
     else
+      @posts = @group.posts.includes(:user)
       render :new
     end
   end
