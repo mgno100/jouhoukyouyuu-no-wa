@@ -82,12 +82,17 @@
 
 .post {
   margin: 10px 10px 40px;
+  border: #6f7070 1px solid;
 }
 
 .upper-post {
-  font-size: 30px;
-  color: #434a54;
+  font-size: 28px;
+  margin-left: 10px;
 }
+
+.upper-post a {
+  color: #434a54;
+} 
 
 .post-date {
   color: #999;
@@ -97,7 +102,7 @@
 
 .lower-post {
   display: flex;
-  margin: 20px 0 0;
+  margin: 20px 0 0 10px;
 }
 
 .post-user {
