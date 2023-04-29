@@ -104,3 +104,100 @@
   color: #434a54;
   font-size: 14px;
 }
+
+/* 情報投稿画面 */
+.post-create-contents {
+  background-color: #f5f5f5;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.post-create-header {
+  padding: 5vh 0;
+  text-align: center;
+}
+
+.post-create-main {
+  background-color: #FFF;
+  width: 40vw;
+  padding: 10vh 15vw;
+}
+
+.post-create-title {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.post-create-footer {
+  padding: 5vh 0;
+  text-align: center;
+}
+
+.new-posts {
+  padding: 2vh 0;
+}
+
+.new-posts-text {
+  min-width: 170px;
+  margin-bottom: 10px;
+}
+
+.indispensable {
+  background: #ea352b;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold
+}
+
+.posts-text {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+.posts-explain {
+  margin-top: 2vh;
+}
+
+.create-btn-contents {
+  width: 100%;
+  text-align: center;
+}
+
+.create-btn {
+  background: #113b7d;
+  border: 1px solid #113b7d;
+  color: #fff;
+  width: 70%;
+  height: 50px;
+  font-size: 16px;
+  margin: 4vh 0;
+}
+
+.back-btn {
+  width: 30%;
+  background: #aaa;
+  border: 1px solid #aaa;
+  color: #fff;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 13px;
+}

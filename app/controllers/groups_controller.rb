@@ -9,7 +9,7 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
     unless @group.users.exists?(current_user.id)
       @group.users << current_user
-      redirect_to group_posts_path(:group_id)
+      redirect_to group_posts_path(@group.id)
     end
   end
 
