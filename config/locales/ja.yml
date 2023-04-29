@@ -7,3 +7,6 @@ ja:
         position: 役職
       group:
         name: グループ名
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
