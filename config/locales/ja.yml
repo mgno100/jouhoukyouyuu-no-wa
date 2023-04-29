@@ -7,6 +7,9 @@ ja:
         position: 役職
       group:
         name: グループ名
+      post:
+        title: タイトル名
+        sentence: 情報の内容文
   time:
     formats:
       default: "%Y/%m/%d %H:%M:%S"
