@@ -8,14 +8,11 @@
 </div>
 
 <div class="members">
+<% @group.users.each do |user| %>
 <div class="member">
     <div class="member-name">
-      山田海子
+      <%= user.nickname %>
     </div>
   </div>
-  <div class="member">
-    <div class="member-name">
-      木本次郎
-    </div>
-  </div>
+  <% end %>
 </div>
