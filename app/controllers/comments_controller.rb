@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
       redirect_to group_post_path(@post.group_id, @post)
     else
       @post = Post.find(params[:post_id])
-      render template: "posts/show"
+      render template: 'posts/show'
     end
   end
 
