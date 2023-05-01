@@ -12,6 +12,8 @@ ja:
         sentence: 情報の内容文
         group: グループ
         user: ユーザー
+      comment:
+        content: コメント
   time:
     formats:
       default: "%Y/%m/%d %H:%M:%S"

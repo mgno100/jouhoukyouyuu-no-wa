@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
   before_action :authenticate_user!
-  
+
   def create
     @post = Post.find(params[:post_id])
     @comment = @post.comments.new(comment_params)
@@ -8,6 +8,7 @@ class CommentsController < ApplicationController
       @comment = Comment.new
       redirect_to group_post_path(@post.group_id, @post)
     else
+      @post = Post.find(params[:post_id])
       render template: "posts/show"
     end
   end

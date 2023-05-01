@@ -36,6 +36,7 @@
     </div>
     <div class="comment-box">
       <%= form_with(model: [@post, @comment], url:"/groups/#{@post.group_id}/posts/#{@post.id}/comments", method: :post, local: true) do |f| %>
+      <%= render 'shared/error-messages', model: f.object %>
         <%= f.text_area :content,  class:"comment-text", placeholder: "コメントする", width: "60%",  rows: "2" %>
         <%= f.submit "送信", class:"comment-btn" %>
       <% end %>
