@@ -1,0 +1,35 @@
+<%= stylesheet_link_tag 'posts', :media => "all" %>
+<%= stylesheet_link_tag 'error-messages.css', :media => "all" %>
+
+<div class="post-show">
+  <header class="post-show-header">
+    <%=link_to "グループルームへもどる", "#" %>
+  </header>
+  <div class="post-box">
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-post">タイトル名</th>
+          <td class="detail-value"><%= @post.title %></td>
+        </tr>
+        <tr>
+          <th class="detail-post">情報の内容文</th>
+          <td class="detail-value"><%= @post.sentence %></td>
+        </tr>
+      </tbody>
+    </table>
+    <% if @post.user_id == current_user.id %>
+      <%= link_to "商品の編集", "#", method: :get, class: "post-red-btn" %>
+      <p class="or-text">or</p>
+      <%= link_to "削除", "#", method: :delete, class:"post-destroy" %>
+    <% end %>
+  </div>
+
+  <div class="comment-box">
+    <%= form_with(model: [@comment, @post], url:"/groups/#{@post.group_id}/posts/#{@post.id}/comments", local: true) do |f| %>
+      <%= f.text_area :content,  class:"comment-text", placeholder: "コメントする", width: "60%",  rows: "2" %>
+      <%= f.submit "送信", class:"comment-btn" %>
+    <% end %>
+  </div>
+</div>
+

@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     member do
       get 'join'
     end
-    resources :posts, only: [:index, :new, :create]
+    resources :posts, only: [:index, :new, :create, :show] do
+      resources :comments, only: [:create]
+    end
   end
 end

@@ -1,7 +1,7 @@
 <div class="post">
   <div class="upper-post">
       <!-- 投稿した情報のタイトル名を出力する -->
-      <%= link_to (post.title), "#" %>
+      <%= link_to (post.title), group_post_path(@group, post) %>
   </div>
   <div class="lower-post">
     <div class="post-user">
