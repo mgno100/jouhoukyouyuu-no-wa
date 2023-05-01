@@ -24,12 +24,22 @@
       <%= link_to "削除", "#", method: :delete, class:"post-destroy" %>
     <% end %>
   </div>
-
-  <div class="comment-box">
-    <%= form_with(model: [@post, @comment], url:"/groups/#{@post.group_id}/posts/#{@post.id}/comments", method: :post, local: true) do |f| %>
-      <%= f.text_area :content,  class:"comment-text", placeholder: "コメントする", width: "60%",  rows: "2" %>
-      <%= f.submit "送信", class:"comment-btn" %>
-    <% end %>
+  <div class="comments-container">
+    <div class="comments">
+      <h2>＜コメント一覧＞</h2>
+        <% @post.comments.each do |comment| %>
+          <div class="comment">
+            <p class="user-info"><%= comment.user.nickname %>： </p>
+            <p><%= comment.content%></p>
+          </div>
+        <% end %>
+    </div>
+    <div class="comment-box">
+      <%= form_with(model: [@post, @comment], url:"/groups/#{@post.group_id}/posts/#{@post.id}/comments", method: :post, local: true) do |f| %>
+        <%= f.text_area :content,  class:"comment-text", placeholder: "コメントする", width: "60%",  rows: "2" %>
+        <%= f.submit "送信", class:"comment-btn" %>
+      <% end %>
+    </div>
   </div>
 </div>
 
