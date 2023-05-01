@@ -206,3 +206,136 @@
 .copyright {
   font-size: 13px;
 }
+
+/* 投稿詳細画面 */
+.post-show {
+  background-color: #f8f8f8;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 0
+}
+
+.post-show-header {
+  width: 100vw;
+  padding-bottom: 5vh;
+  text-align: left;
+  font-size: 20px;
+}
+
+.post-show-header a {
+  color: #333;
+  margin-left: 10px;
+  border-bottom: #333 1px solid;
+}
+
+.post-box {
+  background-color: #FFF;
+  width: 70vw;
+  padding: 10vh 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.detail-table {
+  margin-bottom: 30px;
+  width: 70%;
+  height: 40vh;
+}
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.detail-post {
+  width: 20%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 16px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 16px;
+  overflow-wrap: break-all;
+}
+
+.post-red-btn {
+  text-align: center;
+  background-color: #ea352d;
+  font-size: 24px;
+  font-weight: bold;
+  color: #FFF;
+  margin: 20px 0px;
+  padding: 2vh 10vw
+}
+
+.or-text {
+  font-size: 20px
+}
+
+.post-destroy {
+  background-color: lightgray;
+  text-align: center;
+  font-size: 24px;
+  color: black;
+  margin: 20px 0px;
+  padding: 2vh 10vw
+}
+
+.comment-box {
+  width: 40vw;
+  background-color: #fff;
+  margin: 5vh 0;
+  text-align: center;
+}
+
+.comment-text {
+  width: 100%;
+  height: 100px;
+  border: solid 2px #dedede;
+  resize: none;
+}
+
+.comment-btn {
+  line-height: 48px;
+  background-color: #57C3E9;
+  border: 1px solid #57C3E9;
+  color: #fff;
+  width: 50%;
+  min-width: 150px;
+  font-size: 18px;
+  border-radius: 100px;
+  margin-bottom: 2vh;
+}
+
+.comments-container {
+  width: 40vw;background-color: #FFF;
+  margin-top: 20px;
+
+}
+
+.comments {
+  padding: 5px;
+  margin-top: 15px;
+  background-color: #FFF;
+}
+
+.comments h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.comment {
+  display: flex;
+}
+
+.user-info {
+  color: #3a3b3a;
+}
