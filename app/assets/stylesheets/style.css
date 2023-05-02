@@ -210,8 +210,7 @@
 .group-joing-btn {
   width: 70px;
   height: 70%;
-  background-color: #bdbdbd;
-  color: #000000;
+  background-color: #52a354;
   margin: auto auto auto 10px;
   text-align: center;
 }
@@ -223,6 +222,20 @@
 
 .join {
   color: #ffffff;
+}
+
+.joing {
+  color: #ffffff;
+}
+
+.group-index-footer {
+  padding: 2vh 0;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+.copyright {
+  font-size: 13px;
 }
 
 /* グループ作成画面 */

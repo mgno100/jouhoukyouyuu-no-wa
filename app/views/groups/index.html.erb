@@ -36,7 +36,7 @@
         <%if group.users.exists?(current_user.id)%>
           <div class="group-joing-btn">
             <div class="group-joing-text">
-              参加中
+              <%= link_to 'ルームへ', group_posts_path(group), class: "joing" %>
             </div>
           </div>
         <% else %>
@@ -52,4 +52,8 @@
 </div>
 
 
-<%= render "shared/footer" %>
+<footer class="group-index-footer">
+    <p class="copyright">
+      ©︎2023 情報共有の「わ」
+    </p>
+  </footer>
