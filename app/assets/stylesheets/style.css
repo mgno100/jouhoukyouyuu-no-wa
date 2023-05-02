@@ -210,8 +210,7 @@
 .group-joing-btn {
   width: 70px;
   height: 70%;
-  background-color: #bdbdbd;
-  color: #000000;
+  background-color: #52a354;
   margin: auto auto auto 10px;
   text-align: center;
 }
@@ -222,6 +221,10 @@
 }
 
 .join {
+  color: #ffffff;
+}
+
+.joing {
   color: #ffffff;
 }
 
