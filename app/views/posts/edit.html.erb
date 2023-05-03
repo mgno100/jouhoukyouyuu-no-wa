@@ -25,7 +25,7 @@
     </div>
     <div class="create-btn-contents">
       <%= f.submit "変更する" ,class:"create-btn" %>
-      <%=link_to 'もどる', "#", class:"back-btn" %>
+      <%=link_to 'もどる', group_post_path(@post.group.id, @post.id), class:"back-btn" %>
     </div>
   </div>
   <% end %>
