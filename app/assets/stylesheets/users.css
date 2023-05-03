@@ -9,11 +9,6 @@
 
 .user-show-heading {
   width: 100vw;
-  text-align: left;
-  font-size: 20px;
-}
-
-.user-show-heading p {
   text-align: center;
   font-size: 35px;
 }

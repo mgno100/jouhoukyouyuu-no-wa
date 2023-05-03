@@ -18,7 +18,7 @@
 
 <div class="user-show">
   <div class="user-show-heading">
-    <p>○○さんの情報</p>
+    <%= "#{@user.nickname}さんの情報" %>
   </div>
   <div class="user-box">
     <table class="detail-table">
@@ -40,7 +40,7 @@
   </div>
 
   <div class="user-show-heading">
-    <p>○○さんの参加しているグループ</p>
+    <%= "#{@user.nickname}さんの参加しているグループ" %>
   </div>
   <div class='join-group-container'>
     <div class='join-group-contents'>
