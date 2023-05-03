@@ -13,6 +13,12 @@ class GroupsController < ApplicationController
     end
   end
 
+  def withdrawal
+    @group = Group.find(params[:id])
+    @group.users.delete(current_user)
+    redirect_to user_path(current_user.id)
+  end
+
   def new
     @group = Group.new
   end

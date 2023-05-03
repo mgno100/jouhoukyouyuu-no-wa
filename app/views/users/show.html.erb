@@ -75,7 +75,7 @@
             </div>
             <div class="group-join-delete-btn">
               <div class="group-joing-text">
-                <%= link_to '脱退', "#", class: "join-delete" %>
+                <%= link_to '脱退', withdrawal_group_path(group.group.id), method: :delete, class: "join-delete" %>
               </div>
             </div>
           <% end %>
