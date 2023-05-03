@@ -29,6 +29,7 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find(params[:id])
+    @group = Group.find(params[:group_id])
   end
 
   def destroy

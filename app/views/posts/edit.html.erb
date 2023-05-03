@@ -1,0 +1,38 @@
+<%= stylesheet_link_tag 'posts', :media => "all" %>
+<%= stylesheet_link_tag 'error-messages.css', :media => "all" %>
+
+<div class="post-create-contents">
+  <header class="post-create-header">
+  </header>
+  <div class="post-create-main">
+    <h2 class="post-create-title">投稿する情報を入力</h2>
+    <%= form_with model: [@group, @post],  local: true do |f| %>
+    <%= render 'shared/error-messages', model: f.object %>
+
+    <div class="new-posts">
+      <div class="new-posts-text">
+        タイトル名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :title, class:"posts-text", id:"title", placeholder:"タイトル名（必須 40文字まで)", maxlength:"40" %>
+      <div class="posts-explain">
+        <div class="new-posts-text">
+          情報の内容文
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :sentence, class:"posts-text", id:"sentence", placeholder:"情報の内容文（必須 1000文字まで）", rows: "3", maxlength:"1000" %>
+      </div>
+    </div>
+    <div class="create-btn-contents">
+      <%= f.submit "変更する" ,class:"create-btn" %>
+      <%=link_to 'もどる', "#", class:"back-btn" %>
+    </div>
+  </div>
+  <% end %>
+
+  <footer class="post-create-footer">
+    <p class="copyright">
+      ©︎2023 情報共有の「わ」
+    </p>
+  </footer>
+</div>
