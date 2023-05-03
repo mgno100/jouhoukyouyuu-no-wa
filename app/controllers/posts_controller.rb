@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  
+  before_action :set_post, except: [:index, :new, :create]
+
   def index
     @post = Post.new
     @group = Group.find(params[:group_id])
@@ -24,17 +25,14 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
     @comment = Comment.new
     @comments = @post.comments.includes(:user)
   end
 
   def edit
-    @post = Post.find(params[:id])
   end
 
   def update
-    @post = Post.find(params[:id])
     if @post.update(post_params)
       redirect_to action: :show
     else
@@ -43,10 +41,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    post = Post.find(params[:id])
-    if post.user_id == current_user.id
-    post.destroy
-    redirect_to action: :index
+    if @post.user_id == current_user.id
+      @post.destroy
+      redirect_to action: :index
     end
   end
 
@@ -54,5 +51,9 @@ class PostsController < ApplicationController
 
   def post_params
     params.require(:post).permit(:title, :sentence).merge(user_id: current_user.id)
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
   end
 end
