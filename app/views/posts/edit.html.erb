@@ -6,7 +6,7 @@
   </header>
   <div class="post-create-main">
     <h2 class="post-create-title">投稿する情報を入力</h2>
-    <%= form_with model: [@group, @post],  local: true do |f| %>
+    <%= form_with model: @post, url: group_post_path(@post.group.id, @post.id), local: true do |f| %>
     <%= render 'shared/error-messages', model: f.object %>
 
     <div class="new-posts">
