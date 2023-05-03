@@ -21,7 +21,7 @@
     <% if @post.user_id == current_user.id %>
       <%= link_to "商品の編集", "#", method: :get, class: "post-red-btn" %>
       <p class="or-text">or</p>
-      <%= link_to "削除", "#", method: :delete, class:"post-destroy" %>
+      <%= link_to "削除", group_post_path(@post.group.id, @post.id), method: :delete, class:"post-destroy" %>
     <% end %>
   </div>
   <div class="comments-container">
@@ -29,8 +29,10 @@
       <h2>＜コメント一覧＞</h2>
         <% @post.comments.each do |comment| %>
           <div class="comment">
-            <p class="user-info"><%= comment.user.nickname %>： </p>
-            <p><%= comment.content%></p>
+            <p>
+              <strong class="user-info"><%= comment.user.nickname %>： </strong>
+              <%= comment.content%>
+            </p>
           </div>
         <% end %>
     </div>

@@ -27,6 +27,14 @@ class PostsController < ApplicationController
     @comments = @post.comments.includes(:user)
   end
 
+  def destroy
+    post = Post.find(params[:id])
+    if post.user_id == current_user.id
+    post.destroy
+    redirect_to action: :index
+    end
+  end
+
   private
 
   def post_params
