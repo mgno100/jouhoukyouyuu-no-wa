@@ -43,7 +43,45 @@
   <div class="user-show-heading">
     <p>○○さんの参加しているグループ</p>
   </div>
-  
-</div>
-  
+  <div class='join-group-container'>
+    <div class='join-group-contents'>
+      <% @user.group_users.each do |group| %>
+        <div class='group-content'>
+          <div class='group'>
+            <div class='group-member__num'>
+              <%= group.group.users.count%><span>人</span>
+            </div>
+            <div class='group__unit'>
+              参加中
+            </div>
+          </div>
+
+          <div class='group-detail'>
+            <div class='group-top'>
+              <div class='group-top__title'>
+                <%= group.group.name %>
+              </div>
+            </div>
+            <div class='group-bottom'>
+              <div class='group-bottom__content'>
+                <%= group.group.introduction %>
+              </div>
+            </div>
+          </div>
+          <%if group.group.users.exists?(current_user.id)%>
+            <div class="group-joing-btn">
+              <div class="group-joing-text">
+                <%= link_to 'ルームへ', group_posts_path(group), class: "joing" %>
+              </div>
+            </div>
+            <div class="group-join-delete-btn">
+              <div class="group-joing-text">
+                <%= link_to '脱退', "#", class: "join-delete" %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>

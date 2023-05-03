@@ -54,3 +54,12 @@
   overflow-wrap: break-all;
 }
 
+.join-group-container {
+  padding: 90px 0;
+}
+
+.join-group-contents {
+  width: 770px;
+  margin: 0 auto;
+}
+
