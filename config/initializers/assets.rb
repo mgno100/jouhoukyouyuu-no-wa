@@ -23,4 +23,5 @@ Rails.application.config.assets.precompile += %w(
   second-header.css
   error-messages.css
   posts.css
+  users.css
 )

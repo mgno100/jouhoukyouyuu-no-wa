@@ -3,7 +3,7 @@
     <div class="nav">
       <div class="nav__left">
         <%= link_to 'ログアウト', destroy_user_session_path, class: "logout" %>
-        <%= link_to 'マイページ', "#", class: "my-page" %>
+        <%= link_to 'マイページ', user_path(current_user.id), class: "my-page" %>
       </div>
       <div class="nav__right">
         <%= link_to 'グループ作成', new_group_path, class: "title" %>
