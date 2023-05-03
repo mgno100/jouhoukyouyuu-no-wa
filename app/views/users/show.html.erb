@@ -25,19 +25,18 @@
       <tbody>
         <tr>
           <th class="detail-post">お名前</th>
-          <td class="detail-value"><%= "お名前" %></td>
+          <td class="detail-value"><%= @user.nickname %></td>
         </tr>
         <tr>
           <th class="detail-post">所属</th>
-          <td class="detail-value"><%= "所属" %></td>
+          <td class="detail-value"><%= @user.occupation %></td>
         </tr>
         <tr>
           <th class="detail-post">役職</th>
-          <td class="detail-value"><%= "役職" %></td>
+          <td class="detail-value"><%= @user.position %></td>
         </tr>
       </tbody>
     </table>
-    
   </div>
 
   <div class="user-show-heading">
