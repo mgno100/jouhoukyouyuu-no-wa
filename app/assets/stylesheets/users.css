@@ -46,7 +46,7 @@
   padding: 20px;
   border: 1px solid #dedede;
   font-size: 16px;
-  overflow-wrap: break-all;
+  word-break: break-all;
 }
 
 .join-group-container {
