@@ -29,8 +29,10 @@
       <h2>＜コメント一覧＞</h2>
         <% @post.comments.each do |comment| %>
           <div class="comment">
-            <p class="user-info"><%= comment.user.nickname %>： </p>
-            <p><%= comment.content%></p>
+            <p>
+              <strong class="user-info"><%= comment.user.nickname %>： </strong>
+              <%= comment.content%>
+            </p>
           </div>
         <% end %>
     </div>

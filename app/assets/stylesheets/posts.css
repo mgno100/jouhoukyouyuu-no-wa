@@ -339,3 +339,8 @@
 .user-info {
   color: #3a3b3a;
 }
+
+.comment p {
+  word-break: break-all;
+  margin: 0 3px;
+}
