@@ -1,0 +1,49 @@
+<%= stylesheet_link_tag 'second-header', :media => "all" %>
+<%= stylesheet_link_tag 'users', :media => "all" %>
+<%= stylesheet_link_tag 'style', :media => "all" %>
+
+<header class="header">
+  <div class="heading">
+    <div class="nav">
+      <div class="nav__left">
+        <%= link_to 'ログアウト', destroy_user_session_path, class: "logout" %>
+        <%= link_to 'マイページ', user_path(current_user.id), class: "my-page" %>
+      </div>
+      <div class="nav__right">
+        <%= link_to 'グループ一覧へ', groups_path, class: "title" %>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="user-show">
+  <div class="user-show-heading">
+    <p>○○さんの情報</p>
+  </div>
+  <div class="user-box">
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-post">お名前</th>
+          <td class="detail-value"><%= "お名前" %></td>
+        </tr>
+        <tr>
+          <th class="detail-post">所属</th>
+          <td class="detail-value"><%= "所属" %></td>
+        </tr>
+        <tr>
+          <th class="detail-post">役職</th>
+          <td class="detail-value"><%= "役職" %></td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+
+  <div class="user-show-heading">
+    <p>○○さんの参加しているグループ</p>
+  </div>
+  
+</div>
+  
+</div>

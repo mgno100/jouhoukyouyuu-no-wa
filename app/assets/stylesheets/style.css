@@ -220,12 +220,24 @@
   margin-top: 25px;
 }
 
+.group-join-delete-btn {
+  width: 70px;
+  height: 70%;
+  background-color: #b5b5b5;
+  margin: auto auto auto 10px;
+  text-align: center;
+}
+
 .join {
   color: #ffffff;
 }
 
 .joing {
   color: #ffffff;
+}
+
+.join-delete {
+  color: #000000;
 }
 
 .group-index-footer {
