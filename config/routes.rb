@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :groups, only: [:index, :new, :create] do
     member do
       get 'join'
+      delete 'withdrawal'
     end
     resources :posts, only: [:index, :new, :create, :show] do
       resources :comments, only: [:create]
