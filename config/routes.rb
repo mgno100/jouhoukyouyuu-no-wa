@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       get 'join'
       delete 'withdrawal'
     end
-    resources :posts, only: [:index, :new, :create, :show, :destroy] do
+    resources :posts, only: [:index, :new, :create, :show, :destroy, :edit] do
       resources :comments, only: [:create]
     end
   end
