@@ -70,7 +70,7 @@
           <%if group.group.users.exists?(current_user.id)%>
             <div class="group-joing-btn">
               <div class="group-joing-text">
-                <%= link_to 'ルームへ', group_posts_path(group), class: "joing" %>
+                <%= link_to 'ルームへ', group_posts_path(group.group.id), class: "joing" %>
               </div>
             </div>
             <div class="group-join-delete-btn">
