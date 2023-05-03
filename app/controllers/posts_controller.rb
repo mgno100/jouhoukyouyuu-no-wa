@@ -1,20 +1,18 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_post, except: [:index, :new, :create]
+  before_action :set_group, only: [:index, :new, :create]
 
   def index
     @post = Post.new
-    @group = Group.find(params[:group_id])
     @posts = @group.posts.includes(:user)
   end
 
   def new
     @post = Post.new
-    @group = Group.find(params[:group_id])
   end
 
   def create
-    @group = Group.find(params[:group_id])
     @post = @group.posts.new(post_params)
     if @post.save
       redirect_to group_posts_path(@group)
@@ -55,5 +53,9 @@ class PostsController < ApplicationController
 
   def set_post
     @post = Post.find(params[:id])
+  end
+
+  def set_group
+    @group = Group.find(params[:group_id])
   end
 end
