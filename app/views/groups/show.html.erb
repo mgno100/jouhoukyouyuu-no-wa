@@ -1,0 +1,29 @@
+<%= stylesheet_link_tag 'style', :media => "all" %>
+<%= stylesheet_link_tag 'error-messages.css', :media => "all" %>
+
+<div class="group-show">
+  <header class="group-show-header">
+    <%=link_to "マイページへもどる", "#" %>
+  </header>
+  <div class="group-box">
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-group">グループ名</th>
+          <td class="detail-value"><%= "グループ名" %></td>
+        </tr>
+        <tr>
+          <th class="detail-group">グループの紹介文</th>
+          <td class="detail-value"><%= "グループの紹介文" %></td>
+        </tr>
+        <tr>
+          <th class="detail-group">グループメンバー</th>
+          <td class="detail-value"><%= "グループメンバー" %></td>
+        </tr>
+      </tbody>
+    </table>
+      <%= link_to "グループの編集", "#", method: :get, class: "group-red-btn" %>
+      <p class="or-text">or</p>
+      <%= link_to "削除", "#", method: :delete, class:"group-destroy" %>
+  </div>
+</div>
