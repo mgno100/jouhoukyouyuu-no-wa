@@ -417,6 +417,10 @@
   word-break: break-all;
 }
 
+.group-member-user p {
+  word-break: break-all;
+}
+
 .group-red-btn {
   text-align: center;
   background-color: #ea352d;
