@@ -1,0 +1,35 @@
+<%= stylesheet_link_tag 'style', :media => "all" %>
+
+<div class="group-show">
+  <header class="group-show-header">
+    <%=link_to "マイページへもどる", user_path(current_user.id) %>
+  </header>
+  <div class="group-box">
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-group">グループ名</th>
+          <td class="detail-value"><%= @group.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-group">グループの紹介文</th>
+          <td class="detail-value"><%= @group.introduction %></td>
+        </tr>
+        <tr>
+          <th class="detail-group">グループメンバー</th>
+          <td class="detail-value">
+            <% @group.group_users.each do |group| %>
+             <div class="group-member-user">
+               <p>
+                 <%= "・#{group.user.nickname}" %>
+               </p>
+             </div>
+            <% end %></td>
+        </tr>
+      </tbody>
+    </table>
+      <%= link_to "グループの編集", "#", method: :get, class: "group-red-btn" %>
+      <p class="or-text">or</p>
+      <%= link_to "削除", "#", method: :delete, class:"group-destroy" %>
+  </div>
+</div>

@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     sessions: 'users/sessions'
   }
   root to: "top#index"
-  resources :groups, only: [:index, :new, :create, :destroy] do
+  resources :groups, only: [:index, :new, :create, :show, :destroy] do
     member do
       get 'join'
       delete 'withdrawal'
