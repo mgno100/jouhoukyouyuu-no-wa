@@ -220,6 +220,19 @@
   margin-top: 25px;
 }
 
+.group-show-btn {
+  width: 70px;
+  height: 70%;
+  background-color: #fa8655;
+  margin: auto auto auto 10px;
+  text-align: center;
+}
+
+.group-show-text {
+  font-size: 14px;
+  margin-top: 25px;
+}
+
 .group-join-delete-btn {
   width: 70px;
   height: 70%;
@@ -228,11 +241,9 @@
   text-align: center;
 }
 
-.join {
-  color: #ffffff;
-}
-
-.joing {
+.join,
+.joing,
+.details {
   color: #ffffff;
 }
 

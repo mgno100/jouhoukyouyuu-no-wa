@@ -73,6 +73,11 @@
                 <%= link_to 'ルームへ', group_posts_path(group.group.id), class: "joing" %>
               </div>
             </div>
+            <div class="group-show-btn">
+              <div class="group-show-text">
+                <%= link_to '詳細', group_path(group.group.id), class: "details" %>
+              </div>
+            </div>
             <div class="group-join-delete-btn">
               <div class="group-joing-text">
                 <%= link_to '脱退', withdrawal_group_path(group.group.id), method: :delete, class: "join-delete" %>
