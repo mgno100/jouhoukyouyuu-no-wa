@@ -1,11 +1,13 @@
 <%= stylesheet_link_tag 'second-header', :media => "all" %>
 <%= stylesheet_link_tag 'style', :media => "all" %>
-<%= stylesheet_link_tag 'footer', :media => "all" %>
 
 <%= render "shared/second-header" %>
 
 <%# 一覧表示画面 %>
 <div class='group-index-main'>
+  <div class="group-index-title">
+    グループ一覧
+  </div>
   <div class='group-index-contents'>
     <% @groups.each do |group| %>
       <%# グループ１つ分の表示 %>
@@ -57,8 +59,3 @@
 </div>
 
 
-<footer class="group-index-footer">
-    <p class="copyright">
-      ©︎2023 情報共有の「わ」
-    </p>
-  </footer>
