@@ -28,8 +28,10 @@
         </tr>
       </tbody>
     </table>
+    <% if current_user.id == @group.user_id %>
       <%= link_to "グループの編集", "#", method: :get, class: "group-red-btn" %>
       <p class="or-text">or</p>
-      <%= link_to "削除", "#", method: :delete, class:"group-destroy" %>
+      <%= link_to "削除", group_path(@group.id), method: :delete, class:"group-destroy" %>
+    <% end %>
   </div>
 </div>
