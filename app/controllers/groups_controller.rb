@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_group, only: [:join, :withdrawal, :show]
+  before_action :set_group, only: [:join, :withdrawal, :show, :destroy]
 
   def index
     @groups = Group.all.order(created_at: :desc)
@@ -34,10 +34,19 @@ class GroupsController < ApplicationController
   def show
   end
 
+  def destroy
+    if @group.user_id == current_user.id
+      @group.destroy
+      redirect_to user_path(current_user.id)
+    else
+      redirect_to user_path(current_user.id)
+    end
+  end
+
   private
 
   def group_params
-    params.require(:group).permit(:name, :introduction, user_ids: [])
+    params.require(:group).permit(:name, :introduction, user_ids: []).merge(user_id: current_user.id)
   end
 
   def set_group
