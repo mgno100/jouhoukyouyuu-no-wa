@@ -88,4 +88,64 @@
       <% end %>
     </div>
   </div>
+
+  <div class="user-show-heading">
+    <%= "#{@user.nickname}さんの作成しているグループ" %>
+  </div>
+  <div class='join-group-container'>
+    <div class='join-group-contents'>
+      <% @user.owned_groups.each do |group| %>
+        <div class='group-content'>
+          <div class='group'>
+            <div class='group-member__num'>
+              <%= group.users.count%><span>人</span>
+            </div>
+            <div class='group__unit'>
+              参加中
+            </div>
+          </div>
+
+          <div class='group-detail'>
+            <div class='group-top'>
+              <div class='group-top__title'>
+                <%= group.name %>
+              </div>
+            </div>
+            <div class='group-bottom'>
+              <div class='group-bottom__content'>
+                <%= group.introduction %>
+              </div>
+            </div>
+          </div>
+          <%if group.users.exists?(current_user.id)%>
+            <div class="group-joing-btn">
+              <div class="group-joing-text">
+                <%= link_to 'ルームへ', group_posts_path(group.id), class: "joing" %>
+              </div>
+            </div>
+            <div class="group-show-btn">
+              <div class="group-show-text">
+                <%= link_to '詳細', group_path(group.id), class: "details" %>
+              </div>
+            </div>
+            <div class="group-join-delete-btn">
+              <div class="group-joing-text">
+                <%= link_to '脱退', withdrawal_group_path(group.id), method: :delete, class: "join-delete" %>
+              </div>
+            </div>
+            <% else %>
+            <div class="group-show-btn">
+              <div class="group-show-text">
+                <%= link_to '詳細', group_path(group.id), class: "details" %>
+              </div>
+            </div>
+            <div class="group-join-btn">
+              <div class="group-join-text">
+                <%= link_to '参加', join_group_path(group.id), class: "join" %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
+
 </div>
