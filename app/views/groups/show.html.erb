@@ -2,7 +2,8 @@
 
 <div class="group-show">
   <header class="group-show-header">
-    <%=link_to "マイページへもどる", user_path(current_user.id) %>
+    <%=link_to "グループ一覧へ", groups_path %>
+    <%=link_to "マイページへ", user_path(current_user.id) %>
   </header>
   <div class="group-box">
     <table class="detail-table">
@@ -12,18 +13,27 @@
           <td class="detail-value"><%= @group.name %></td>
         </tr>
         <tr>
-          <th class="detail-group">グループの紹介文</th>
+        <tr>
+          <th class="detail-group">作成者</th>
+          <td class="detail-value"><%= @group.user.nickname %></td>
+        </tr>
+        <tr>
+          <th class="detail-group">紹介文</th>
           <td class="detail-value"><%= @group.introduction %></td>
         </tr>
         <tr>
           <th class="detail-group">グループメンバー</th>
           <td class="detail-value">
-            <% @group.group_users.each do |group| %>
-             <div class="group-member-user">
-               <p>
-                 <%= "・#{group.user.nickname}" %>
-               </p>
-             </div>
+            <%if @group.users.exists?(current_user.id) %>
+              <% @group.group_users.each do |group| %>
+               <div class="group-member-user">
+                 <p>
+                   <%= "・#{group.user.nickname}" %>
+                 </p>
+               </div>
+              <% end %>
+            <% else %>
+              <p>※※ グループ参加者のみ閲覧可能です ※※</p>
             <% end %></td>
         </tr>
       </tbody>
