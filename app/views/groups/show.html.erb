@@ -13,6 +13,11 @@
           <td class="detail-value"><%= @group.name %></td>
         </tr>
         <tr>
+        <tr>
+          <th class="detail-group">作成者</th>
+          <td class="detail-value"><%= @group.user.nickname %></td>
+        </tr>
+        <tr>
           <th class="detail-group">グループの紹介文</th>
           <td class="detail-value"><%= @group.introduction %></td>
         </tr>
