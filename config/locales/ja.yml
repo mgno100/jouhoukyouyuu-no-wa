@@ -7,6 +7,7 @@ ja:
         position: 役職
       group:
         name: グループ名
+        user: ユーザー
       post:
         title: タイトル名
         sentence: 情報の内容文
