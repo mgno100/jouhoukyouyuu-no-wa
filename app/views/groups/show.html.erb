@@ -19,12 +19,16 @@
         <tr>
           <th class="detail-group">グループメンバー</th>
           <td class="detail-value">
-            <% @group.group_users.each do |group| %>
-             <div class="group-member-user">
-               <p>
-                 <%= "・#{group.user.nickname}" %>
-               </p>
-             </div>
+            <%if @group.users.exists?(current_user.id) %>
+              <% @group.group_users.each do |group| %>
+               <div class="group-member-user">
+                 <p>
+                   <%= "・#{group.user.nickname}" %>
+                 </p>
+               </div>
+              <% end %>
+            <% else %>
+              <p>※※ グループ参加者のみ閲覧可能です ※※</p>
             <% end %></td>
         </tr>
       </tbody>
