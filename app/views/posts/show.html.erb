@@ -13,8 +13,8 @@
           <td class="detail-value"><%= @post.title %></td>
         </tr>
         <tr>
-          <th class="detail-post">情報の内容文</th>
-          <td class="detail-value"><%= @post.sentence %></td>
+          <th class="detail-post">内容文</th>
+          <td class="detail-value"><%= safe_join(@post.sentence.split("\n"),tag(:br)) %></td>
         </tr>
       </tbody>
     </table>
