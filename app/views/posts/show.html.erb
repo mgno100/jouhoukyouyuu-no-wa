@@ -13,6 +13,10 @@
           <td class="detail-value"><%= @post.title %></td>
         </tr>
         <tr>
+          <th class="detail-post">投稿者</th>
+          <td class="detail-value"><%= @post.user.nickname %></td>
+        </tr>
+        <tr>
           <th class="detail-post">内容文</th>
           <td class="detail-value"><%= safe_join(@post.sentence.split("\n"),tag(:br)) %></td>
         </tr>
