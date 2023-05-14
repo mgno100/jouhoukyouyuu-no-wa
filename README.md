@@ -14,18 +14,33 @@
 
 - has_many :groups
 - has_many :posts
+- has_many :comments
+- has_many :owned_groups, class_name: "Group"
 
 ## groups テーブル
 
-| Column       | Type    | Options     |
-| ------------ | ------- | ----------- |
-| name         | string  | null: false |
-| introduction | text    |             |
+| Column       | Type       | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| name         | string     | null: false                    |
+| introduction | text       |                                |
+| user         | references | null: false, foreign_key: true |
 
 ### Association
 
 - has_many :users
 - has_many :posts
+- belongs_to :user
+
+## group_usersテーブル
+
+| Colum | Type       | Options           |
+| ----- | ---------- | ----------------- |
+| user  | references | foreign_key: true |
+| group | references | foreign_key: true |
+
+### Association
+- belongs_to :group
+- belongs_to :user
 
 ## postsテーブル
 
@@ -46,9 +61,11 @@
 
 | Column  | Type       | Options                        |
 | ------- | ---------- | ------------------------------ |
-| content | text       | null: false                    |
+| content | string     | null: false                    |
 | post    | references | null: false, foreign_key: true |
+| user    | references | null: false, foreign_key: true |
 
 ### Association
 
 - belongs_to :post
+- belongs_to :user
